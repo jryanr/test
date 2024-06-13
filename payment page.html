@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Product Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    
+</head>
+<body>
+    <div class="container">
+        <div class="title">Payment Instructions</div>
+        <div class="product-details">
+            <img src="placeholder.jpg" alt="Product Image" id="product-image">
+            <div class="product-info">
+                <p><strong>Artwork Title:</strong> <span id="product-name">Example Product</span></p>
+                <p><strong>Price:</strong> <span id="product-price">$100.00</span></p>
+            </div>
+        </div>
+        <div class="instructions">
+            <p>Thank you for your purchase! Please follow the instructions below to complete your payment:</p>
+            <ul>
+                <li>Ensure you have your invoice number ready.</li>
+                <li>Transfer the total amount to the bank account details provided below.</li>
+                <li>Include your invoice number in the payment reference to ensure your payment is processed correctly.</li>
+                <li>After completing the transfer, please email the payment confirmation to <a href="mailto:payments@example.com">payments@example.com</a>.</li>
+            </ul>
+            <div class="bank-details">
+                <p><strong>Bank Name:</strong> Example Bank</p>
+                <p><strong>Account Name:</strong> Your Company Name</p>
+                <p><strong>Account Number:</strong> 12345678</p>
+                <p><strong>Sort Code:</strong> 12-34-56</p>
+                <p><strong>IBAN:</strong> GB12EXAMPLE1234567890</p>
+                <p><strong>SWIFT/BIC:</strong> EXAMPLXX</p>
+            </div>
+            <p class="important">Note: Payments must be made within 14 days to avoid any delays in order processing.</p>
+        </div>
+        <div class="contact-info">
+            <p>If you have any questions, please contact our support team at <a href="mailto:support@example.com">support@example.com</a> or call us at (123) 456-7890.</p>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        // Retrieve product details from sessionStorage
+        var productDetails = sessionStorage.getItem('productDetails');
+
+        // If productDetails exists, parse and update the HTML
+        if (productDetails) {
+            productDetails = JSON.parse(productDetails);
+            document.getElementById('product-image').src = productDetails.imageUrl;
+            document.getElementById('product-name').textContent = productDetails.name;
+            document.getElementById('product-price').textContent = productDetails.price;
+            document.getElementById('product-quantity').textContent = productDetails.quantity;
+        }
+    </script>
+</body>
+    <!--
+    <div class="center">
+        <button id="show-login">Login</button>
+    </div>
+
+    <div class="popup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h2>Log in</h2>
+            <div class="form-element">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter Email">
+            </div>
+            <div class="form-element">
+                <label for="password">Password</label>
+                <input type="password" id="passowrd" placeholder="Enter password">
+            </div>
+            <div class="form-element">
+                <button>Sign In</button>
+            </div>
+        </div>
+    </div>
+    -->
+
+
+    <footer>
+        <p>&copy; 2024 Stylish Product Gallery</p>
+    </footer>
+
+
+
+</body>
+</html>
